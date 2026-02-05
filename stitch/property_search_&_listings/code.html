@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Property Search &amp; Listings | KenyaPrime Realty</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Georgia", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d121b] dark:text-white">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-solid border-[#e7ebf3] dark:border-gray-800 px-4 md:px-10 lg:px-40 py-3">
+<div class="flex items-center justify-between whitespace-nowrap max-w-[1200px] mx-auto">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-[#0d121b] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] font-serif">KenyaPrime</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-9">
+<a class="text-[#0d121b] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#">Buy</a>
+<a class="text-[#0d121b] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#">Rent</a>
+<a class="text-[#0d121b] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#">Sell</a>
+<a class="text-[#0d121b] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#">Developments</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<label class="hidden md:flex items-center relative">
+<span class="material-symbols-outlined absolute left-3 text-gray-400">search</span>
+<input class="form-input w-64 rounded-lg border-none bg-[#e7ebf3] dark:bg-gray-800 text-[#0d121b] dark:text-white focus:ring-2 focus:ring-primary pl-10 text-sm h-10" placeholder="Location, Project, or Agent"/>
+</label>
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold tracking-wide transition-all">
+                    List Property
+                </button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuALm1Dw8aynbmhjmn1CRRBcwGq9DDbSweO5QAulolI4ZlDelYmfqpcPa6HBWBL-qx9Zc9FXApgHq2UCYkDGkX0mnsDc3jsCiBIdwP1AlDqAD5_ZeOMUr8t0tXXy7V68MjII257T89ITGT5M-BrIWqzeURboBvH2gvomGy1n8FWCpCYsOIYBaXHHOjcIj8zCCSjRAOp0tIvTKRcckIduPmCxOuFxNY-TgjP6LHgVv6yld-MscrVnZA4xovmx9igWTYsLL9vrc6SVuAI");'></div>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-4 md:px-10 lg:px-40 py-6">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 mb-4">
+<a class="text-primary text-sm font-medium" href="#">Home</a>
+<span class="text-gray-400 text-sm">/</span>
+<span class="text-gray-500 dark:text-gray-400 text-sm">Search Results</span>
+<span class="text-gray-400 text-sm">/</span>
+<span class="text-[#0d121b] dark:text-white text-sm font-semibold">Nairobi Properties</span>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between items-end gap-4 mb-8">
+<div class="flex flex-col gap-2">
+<h1 class="text-[#0d121b] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] font-serif">Properties in Kenya</h1>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal">Discover your dream home from over 1,000 verified listings across the country.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined text-sm">map</span>
+                    Map View
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined text-sm">sort</span>
+                    Sort: Featured
+                </button>
+</div>
+</div>
+<!-- Chips / Quick Filters -->
+<div class="flex gap-3 mb-8 overflow-x-auto pb-2">
+<button class="flex shrink-0 items-center gap-2 rounded-full bg-primary text-white px-4 py-1.5 text-sm font-medium">
+                Nairobi
+                <span class="material-symbols-outlined text-sm">close</span>
+</button>
+<button class="flex shrink-0 items-center gap-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4 py-1.5 text-sm font-medium">
+                Price: KES 5M - 50M
+                <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex shrink-0 items-center gap-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4 py-1.5 text-sm font-medium">
+                Property Type
+                <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex shrink-0 items-center gap-2 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4 py-1.5 text-sm font-medium">
+                Bedrooms
+                <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-72 shrink-0">
+<div class="bg-white dark:bg-background-dark border border-gray-200 dark:border-gray-800 rounded-xl p-6 sticky top-24">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold font-serif">Advanced Filters</h3>
+<button class="text-primary text-xs font-bold uppercase tracking-wider">Reset</button>
+</div>
+<div class="space-y-6">
+<!-- Neighborhood -->
+<div>
+<label class="text-sm font-bold block mb-3">Neighborhood</label>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="form-checkbox rounded border-gray-300 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-primary">Kilimani</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox rounded border-gray-300 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-primary">Westlands</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox rounded border-gray-300 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-primary">Karen</span>
+</label>
+</div>
+</div>
+<!-- Bedrooms -->
+<div>
+<label class="text-sm font-bold block mb-3">Bedrooms</label>
+<div class="grid grid-cols-4 gap-2">
+<button class="h-10 border border-gray-200 dark:border-gray-700 rounded-lg text-sm hover:bg-primary/10 transition-colors">1+</button>
+<button class="h-10 border border-gray-200 dark:border-gray-700 rounded-lg text-sm hover:bg-primary/10 transition-colors">2+</button>
+<button class="h-10 bg-primary text-white rounded-lg text-sm">3+</button>
+<button class="h-10 border border-gray-200 dark:border-gray-700 rounded-lg text-sm hover:bg-primary/10 transition-colors">4+</button>
+</div>
+</div>
+<!-- Amenities -->
+<div>
+<label class="text-sm font-bold block mb-3">Amenities</label>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox rounded border-gray-300 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-primary">Borehole</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="form-checkbox rounded border-gray-300 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-primary">Backup Generator</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox rounded border-gray-300 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-primary">Swimming Pool</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="form-checkbox rounded border-gray-300 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-gray-700 dark:text-gray-300 group-hover:text-primary">Gym</span>
+</label>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-3 rounded-lg font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all">
+                            Apply Filters
+                        </button>
+</div>
+</div>
+</aside>
+<!-- Listing Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Property Card 1 -->
+<div class="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute top-3 left-3 z-10 flex gap-2">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">For Sale</span>
+<span class="bg-white/90 backdrop-blur text-black text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">New Construction</span>
+</div>
+<button class="absolute top-3 right-3 z-10 size-8 bg-white/20 hover:bg-white/40 backdrop-blur rounded-full flex items-center justify-center text-white transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Modern luxury villa with pool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKkZoBhbQGiFGGqkHt5QI-3sqSFtvZ8dUkwm2REccUITR7YFS4dUQ4igPIkXF241O7sJ4hwOrP86DoC_ZnKJVDF3zyXMxo8hNHbnNd6mcSg5nile82be91utAHizZKsi3uq0RWYWElYifDahTS3F6XeVptCtA73bbjajqLIbHKC3o6mLyGFPmHr5RLsMug_itvDnBSokP3CG4Q2OnNozg1wxz_nzl1qypPgTgZHIf6oR00uQas4rYdhgyxU53wFyMXBpeDIRgLy0o"/>
+</div>
+<div class="p-5">
+<h4 class="text-2xl font-black text-primary mb-1 font-serif">KES 45,000,000</h4>
+<h3 class="text-lg font-bold mb-2 truncate">Luxury 4 Bedroom Penthouse</h3>
+<div class="flex items-center gap-1 text-gray-500 dark:text-gray-400 text-sm mb-4">
+<span class="material-symbols-outlined text-base">location_on</span>
+                                Kilimani, Nairobi
+                            </div>
+<div class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-4">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gray-400">bed</span>
+<span class="text-sm font-semibold">4</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gray-400">bathtub</span>
+<span class="text-sm font-semibold">3</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gray-400">square_foot</span>
+<span class="text-sm font-semibold">2,400 sqft</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Property Card 2 -->
+<div class="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute top-3 left-3 z-10 flex gap-2">
+<span class="bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">To Let</span>
+</div>
+<button class="absolute top-3 right-3 z-10 size-8 bg-white/20 hover:bg-white/40 backdrop-blur rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Spacious modern apartment balcony" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqWG8Iw5p9UnUlOoXAi3BuJ0A4FnaZtqKW2DX4Rg4idYn6g-Z_WcRnamNpag93LZa2nrOo6ys-MdtbtN-sV-uU-TohKDTXzMF5BkU99mAxrX5JmdYT8NxdIs4afCgStjANd0xGaM4y9BBJ8kZLLk-s2IlYxXiFVPYqfmVLJZNjmVvPoDzYrY8Mrxm_87MlaXVm5HvrvU-o8dIzmPkoJEbEg-2kiN9rIKl3nlkPVu9pCZm9JQHg7uTk9dJP5NOrLm71cx997shYDvo"/>
+</div>
+<div class="p-5">
+<h4 class="text-2xl font-black text-primary mb-1 font-serif">KES 120,000 / mo</h4>
+<h3 class="text-lg font-bold mb-2 truncate">Executive 2 Bedroom Apartment</h3>
+<div class="flex items-center gap-1 text-gray-500 dark:text-gray-400 text-sm mb-4">
+<span class="material-symbols-outlined text-base">location_on</span>
+                                Westlands, Nairobi
+                            </div>
+<div class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-4">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gray-400">bed</span>
+<span class="text-sm font-semibold">2</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gray-400">bathtub</span>
+<span class="text-sm font-semibold">2</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gray-400">square_foot</span>
+<span class="text-sm font-semibold">1,200 sqft</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Property Card 3 -->
+<div class="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute top-3 left-3 z-10 flex gap-2">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">For Sale</span>
+</div>
+<button class="absolute top-3 right-3 z-10 size-8 bg-white/20 hover:bg-white/40 backdrop-blur rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Classic suburban house with garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDezXjkbMoT3W6_-gQzMtCZM4WSyErcL5FqdnBff9XNIX5HEdAGItISdfMbLNvBhumU7n4cRN4ThP9M1nESbSeTPH68896gUtAep4jsmL33mO0YQxoRsV4WMb6YnsJ_GqYTevLR1v_9wiNU7j1ymnQvQz7vyjwnGgkX0yeK01hMzwh9xqBIzJrpSHLWyB1Ir3pjOGNh8SZqRXP7R4i3bfo6CtrMlIuvBuwPq5lY5MRouR8HLZkh1oAlkyq68TR-PLAZFIZNkc_n0go"/>
+</div>
+<div class="p-5">
+<h4 class="text-2xl font-black text-primary mb-1 font-serif">KES 85,000,000</h4>
+<h3 class="text-lg font-bold mb-2 truncate">5 Bedroom Townhouse with DQ</h3>
+<div class="flex items-center gap-1 text-gray-500 dark:text-gray-400 text-sm mb-4">
+<span class="material-symbols-outlined text-base">location_on</span>
+                                Karen, Nairobi
+                            </div>
+<div class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-4">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gray-400">bed</span>
+<span class="text-sm font-semibold">5</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gray-400">bathtub</span>
+<span class="text-sm font-semibold">5</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gray-400">square_foot</span>
+<span class="text-sm font-semibold">4,500 sqft</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Property Card 4 -->
+<div class="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute top-3 left-3 z-10 flex gap-2">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">For Sale</span>
+</div>
+<button class="absolute top-3 right-3 z-10 size-8 bg-white/20 hover:bg-white/40 backdrop-blur rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Modern house exterior at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsNf5luCPWoMyFf0v84q4u_t2JK8Mt41y0bJgZRIXhh4un258BfR089cLgoJGSgWJHkvAgyF2X4IaICEHem0ABNS4qyVFlhgKb65yeq28lBENdcm-3T4EkmtKP44pCW2hUt3y-xEufYQhRptmNcZW5SbRr_h8jdGS3tjNJtTlunokni-RBwz3uf28IM11uHOWEGI7OY_bJG6uWdf8tIIZBOP6IyLfpCV6uNeS7B-VcctOS8KoxFzWS94bxybUNrh6PjWN3a-sAdaI"/>
+</div>
+<div class="p-5">
+<h4 class="text-2xl font-black text-primary mb-1 font-serif">KES 22,000,000</h4>
+<h3 class="text-lg font-bold mb-2 truncate">Modern 3 Bedroom House</h3>
+<div class="flex items-center gap-1 text-gray-500 dark:text-gray-400 text-sm mb-4">
+<span class="material-symbols-outlined text-base">location_on</span>
+                                Kiambu Road, Nairobi
+                            </div>
+<div class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-4">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gray-400">bed</span>
+<span class="text-sm font-semibold">3</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gray-400">bathtub</span>
+<span class="text-sm font-semibold">3</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-gray-400">square_foot</span>
+<span class="text-sm font-semibold">1,850 sqft</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex justify-center items-center gap-2">
+<button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">2</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">3</button>
+<span class="px-2">...</span>
+<button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">12</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-20 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark py-12">
+<div class="max-w-[1200px] mx-auto px-4 md:px-10 lg:px-40 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 text-primary mb-6">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold font-serif text-[#0d121b] dark:text-white">KenyaPrime Realty</h2>
+</div>
+<p class="text-gray-500 dark:text-gray-400 max-w-sm mb-6">
+                    Kenya's most trusted real estate platform. We connect buyers and sellers with professional agents and verified property listings.
+                </p>
+<div class="flex gap-4">
+<div class="size-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">public</span>
+</div>
+<div class="size-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div class="size-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">phone</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 font-serif">Quick Links</h4>
+<ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Find a Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Commercial Space</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Mortgage Calculator</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Market Reports</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 font-serif">Support</h4>
+<ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-4 md:px-10 lg:px-40 mt-12 pt-8 border-t border-gray-100 dark:border-gray-800 text-center text-xs text-gray-400">
+            © 2024 KenyaPrime Realty. All rights reserved. Registered with KPRA.
+        </div>
+</footer>
+</body></html>

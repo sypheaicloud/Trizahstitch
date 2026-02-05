@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consultation Booking Form - Kenya Realty</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --kenyan-green: #006600;
+            --silk-black: #0a0a0a;
+            --border-white: rgba(255, 255, 255, 0.1);
+        }
+        @layer base {
+            body {
+                @apply bg-[#000000] text-white;
+            }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#008a00","background-dark": "#000000",
+                        "card-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-white/10 px-10 py-5 bg-black sticky top-0 z-50">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-black uppercase tracking-widest leading-tight">Kenya Realty</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-gray-400 text-sm font-medium hover:text-white transition-colors" href="#">Home</a>
+<a class="text-gray-400 text-sm font-medium hover:text-white transition-colors" href="#">Listings</a>
+<a class="text-gray-400 text-sm font-medium hover:text-white transition-colors" href="#">About</a>
+<a class="text-white text-sm font-bold border-b-2 border-primary pb-1" href="#">Consultation</a>
+</div>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-white text-black text-sm font-bold transition-all hover:bg-primary hover:text-white">
+<span>Sign In</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center py-16 px-4 bg-black">
+<div class="max-w-[1100px] w-full grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-7 lg:col-span-8 bg-card-dark rounded-xl border border-white/10 shadow-2xl overflow-hidden p-10">
+<div class="mb-10">
+<h1 class="text-white text-4xl font-black leading-tight tracking-tight">Book a Consultation</h1>
+<div class="h-1 w-20 bg-primary mt-4"></div>
+<p class="text-gray-400 text-lg font-normal leading-normal mt-4">Speak with an expert about your property goals in Kenya.</p>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 gap-6">
+<label class="flex flex-col w-full">
+<p class="text-white text-sm font-semibold mb-2">Full Name</p>
+<input class="form-input flex w-full rounded-lg text-white border-white/20 bg-white/5 focus:ring-1 focus:ring-primary focus:border-primary h-14 p-4 text-base font-normal placeholder:text-gray-600" placeholder="John Doe" type="text"/>
+</label>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<label class="flex flex-col w-full">
+<p class="text-white text-sm font-semibold mb-2">Phone Number</p>
+<input class="form-input flex w-full rounded-lg text-white border-white/20 bg-white/5 focus:ring-1 focus:ring-primary focus:border-primary h-14 p-4 text-base font-normal placeholder:text-gray-600" placeholder="+254 700 000 000" type="tel"/>
+</label>
+<label class="flex flex-col w-full">
+<p class="text-white text-sm font-semibold mb-2">Email Address</p>
+<input class="form-input flex w-full rounded-lg text-white border-white/20 bg-white/5 focus:ring-1 focus:ring-primary focus:border-primary h-14 p-4 text-base font-normal placeholder:text-gray-600" placeholder="email@example.com" type="email"/>
+</label>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<label class="flex flex-col w-full">
+<p class="text-white text-sm font-semibold mb-2">Interested In</p>
+<select class="form-select flex w-full rounded-lg text-white border-white/20 bg-white/5 focus:ring-1 focus:ring-primary focus:border-primary h-14 px-4 text-base font-normal">
+<option class="bg-card-dark" value="">Select Service</option>
+<option class="bg-card-dark" value="buying">Buying Property</option>
+<option class="bg-card-dark" value="selling">Selling Property</option>
+<option class="bg-card-dark" value="renting">Renting Property</option>
+<option class="bg-card-dark" value="management">Property Management</option>
+</select>
+</label>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<p class="text-white text-sm font-semibold">Preferred Date &amp; Time</p>
+<div class="border border-white/10 rounded-xl bg-white/5 p-6">
+<div class="flex items-center gap-4 mb-6 pb-4 border-b border-white/10">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+<span class="text-gray-300 font-medium">Select a slot (Timezone: EAT)</span>
+</div>
+<div class="grid grid-cols-4 sm:grid-cols-7 gap-3 mb-6">
+<button class="p-3 text-xs text-center border border-white/10 rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-all text-gray-400" type="button">12 Mon</button>
+<button class="p-3 text-xs text-center border-none rounded-lg bg-primary text-white font-bold shadow-[0_0_15px_rgba(0,138,0,0.3)]" type="button">13 Tue</button>
+<button class="p-3 text-xs text-center border border-white/10 rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-all text-gray-400" type="button">14 Wed</button>
+<button class="p-3 text-xs text-center border border-white/10 rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-all text-gray-400" type="button">15 Thu</button>
+<button class="p-3 text-xs text-center border border-white/10 rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-all text-gray-400" type="button">16 Fri</button>
+<button class="p-3 text-xs text-center border border-white/10 rounded-lg bg-white/5 opacity-20 cursor-not-allowed text-gray-500" type="button">17 Sat</button>
+<button class="p-3 text-xs text-center border border-white/10 rounded-lg bg-white/5 opacity-20 cursor-not-allowed text-gray-500" type="button">18 Sun</button>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<button class="p-3 text-sm text-center border border-white/10 rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-all text-gray-400" type="button">09:00 AM</button>
+<button class="p-3 text-sm text-center border border-white/10 rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-all text-gray-400" type="button">11:30 AM</button>
+<button class="p-3 text-sm text-center border-2 border-primary bg-primary/20 text-white font-bold rounded-lg" type="button">02:00 PM</button>
+</div>
+</div>
+</div>
+<button class="w-full flex items-center justify-center rounded-lg h-16 bg-primary text-white text-xl font-black shadow-[0_10px_30px_rgba(0,138,0,0.2)] transition-all hover:scale-[1.02] hover:bg-[#00a300] active:scale-[0.98]" type="submit">
+                                Confirm Booking
+                            </button>
+</form>
+</div>
+<div class="md:col-span-5 lg:col-span-4 space-y-6">
+<div class="bg-card-dark rounded-xl border border-white/10 shadow-2xl overflow-hidden">
+<div class="h-80 bg-center bg-no-repeat bg-cover grayscale hover:grayscale-0 transition-all duration-700" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfBdYn25kuNeNdiB29ODLqsd-xZ7cZ9CxDcR81cs8-LfEY3uazSwGZeGQdZOcBnlhQztsMaOHbtPbdAIf81D1CrlvX6CUoBYR5GGUSUrIdKCUJkHnoIUzy7NyAnmbPmSBPhG_JQL_MPAFn5IshEaWtZPrGZF2HpvaefuZRAzoZvX6y3jaiqvhE1J-NhwrSUGPVATYxceZnoCwa0IAoHMlNCbhOU-40JtiLPuwTODG6WJhIq-N0U1TQcc4ieetlP6aw7vo6xwKGKPc");'></div>
+<div class="p-8 text-center border-t border-white/10">
+<h3 class="text-white text-2xl font-bold">David Mwangi</h3>
+<p class="text-primary text-sm font-bold uppercase tracking-widest mb-6">Senior Property Consultant</p>
+<div class="bg-white/5 p-6 rounded-xl border border-white/10 italic text-gray-300 text-base leading-relaxed">
+                                    "Let's find your dream home together. I specialize in Nairobi's prime residential markets and I'm here to ensure you get the best value."
+                                </div>
+</div>
+</div>
+<div class="bg-primary p-8 rounded-xl shadow-[0_10px_30px_rgba(0,138,0,0.15)] text-white">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+<h4 class="font-black text-lg tracking-tight">Trust Guarantee</h4>
+</div>
+<p class="text-base leading-relaxed text-white/90">
+                                10+ years of local expertise in the Kenyan real estate market. Verified listings and legal vetting on all properties.
+                            </p>
+</div>
+<div class="bg-card-dark rounded-xl border border-white/10 p-6">
+<h4 class="text-xs font-black uppercase text-gray-500 mb-4 tracking-widest">Agent Performance</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-gray-400">Successfully Sold</span>
+<span class="font-bold text-white text-lg">120+ Units</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-gray-400">Client Satisfaction</span>
+<div class="flex items-center gap-1">
+<span class="font-bold text-white text-lg">4.9</span>
+<span class="material-symbols-outlined text-primary text-sm">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto px-10 py-12 border-t border-white/10 bg-black">
+<div class="max-w-[1100px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="flex items-center gap-2 text-white/40">
+<div class="size-5">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-xs font-bold tracking-widest uppercase">Kenya Realty</span>
+</div>
+<p class="text-sm text-gray-600">© 2024 Kenya Realty. Premium Real Estate Solutions.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-gray-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-gray-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-gray-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>
